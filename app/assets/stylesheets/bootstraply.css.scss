@@ -3,7 +3,11 @@ $navbar-default-bg: black;
 $navbar-default-link-hover-color: yellow;
 $jumbotron-bg: red;
 $jumbotron-heading-color: black;
-
+$panel-default-heading-bg: red;
+$panel-footer-bg: red;
+$panel-bg: #AB9D9D;
+$panel-inner-border: black;
+$panel-default-border: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
