@@ -7,9 +7,12 @@
     <p>Proceed at your own risk...</p>
     
     <% if user_signed_in? %>
-        <%= link_to 'logout', destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+        <%= link_to 'New Pin', new_pin_path, class: "btn btn-primary navbar-btn" %>
+        <%= link_to 'Your Pins', pins_path, class: "btn btn-default navbar-btn" %>
     <% else %>
-        <%= link_to 'login', new_user_session_path, class: "btn btn-default navbar-btn" %>
-        <%= link_to 'join', new_user_registration_path, class: "btn btn-primary navbar-btn" %>
+        <%= link_to 'LOGIN', new_user_session_path, class: "btn btn-default navbar-btn" %>
+        <%= link_to 'JOIN US!', new_user_registration_path, class: "btn btn-primary navbar-btn" %>
+        
     <% end %>    
 </div>
