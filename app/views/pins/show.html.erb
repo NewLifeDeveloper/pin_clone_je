@@ -1,11 +1,20 @@
 <p id="notice"><%= notice %></p>
+  <center>
+     <div class="field">
+       <ul class="list-group">
+       <li class="list-group-item center">
+      <h1><%= @pin.description %></h1>
+          <%= image_tag @pin.image.url(:large) %> 
+        <br/><br/>
+        </li></ul></div>
+          </br>
+        <% if user_signed_in? %>
+          </br>
+        <%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary btn-xs"  %> 
+        <%= link_to 'Back', pins_path, class: "btn btn-primary btn-xs" %>
+        <% else %>
+        <%= link_to 'Back', pins_path, class: "btn btn-primary btn-xs" %>
+          <br/><br/><br/><br/>
+        <% end %>
 
-<p>
-  <%= image_tag @pin.image.url(:medium) %>
-  </br> </br>
-  <strong>Description:</strong>
-  <%= @pin.description %>
-</p>
-
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+</center>
